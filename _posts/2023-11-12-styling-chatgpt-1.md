@@ -3,18 +3,21 @@ title: "ChatGPT CSS Tweaks"
 ---
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600&display=swap");
 
 html {
   font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   font-size: 15px;
   color: #cccccc;
   line-height: normal;
-
   letter-spacing: 0.03em;
 }
 
-code {
+code,
+code.hljs,
+code[class*="language-"],
+pre[class*="language-"] {
   font-size: 15px;
   font-family: "Consolas", Monaco, monospace !important;
   line-height: 1;
@@ -34,7 +37,7 @@ code .hljs-function {
   color: #4ec9b0;
 }
 code .hljs-params {
-  color: #cccccc;
+  color: #eee;
 }
 code .hljs-keyword {
   color: #c586c0;
@@ -52,19 +55,19 @@ code .hljs-comment {
   color: #6a9955;
 }
 code .hljs-title,
-.hljs-built_in {
+code .hljs-built_in {
   color: #dcdcaa;
 }
 
-li p strong,
+strong,
 h1,
 h2,
 h3,
 h4,
 .font-semibold,
-.font-bold {
-  color: #ddd;
-  letter-spacing: 0.04em;
+.font-bold,
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  color: #fff;
   font-weight: 500;
 }
 
