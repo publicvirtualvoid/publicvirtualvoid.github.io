@@ -82,4 +82,4 @@ function analyzeSentiment(text: any, entity: any, args: any[]): any;
 Strangely enough, these functions don't all appear in the code. Reading through the source, I discovered that **the library seems to try to create every possible synonym and casing combination of each method**. Presumably to make up for the lack of typing. This is so bizarre. The more I look at this the more I think this project is just JS ragebait. [Have a look if you want to be triggered](https://github.com/KudoAI/chatgpt.js/blob/61f5539d4aedfea28d96bea428f66a7b20b37fc9/chatgpt.js#L1962).
 
 In light of this discovery, I decided against using this library as part of my development.
-Should anyone be interested in the generated declarations, you can find them [here](./assets/chatgpt.js.d.ts).
+Should anyone be interested in the generated declarations, you can find them [here](/assets/files/chatgpt.js.d.ts).
